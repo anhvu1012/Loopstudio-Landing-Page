@@ -20,12 +20,16 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-h1, p {
+h1, p, figure {
   margin: 0;
 }
 
 .flex{
   display: flex;
+}
+
+.grid{
+  display: grid;
 }
 
 .flex-row{
@@ -288,8 +292,23 @@ main{
       }
     }
 
-    
-  }
+    .creations-wrapper{
+      
 
-  
+      h2{
+        @include font-type(heading);
+        font-weight: 300;
+        font-size: 2em;
+        text-align: center;
+      }
+
+      .creations-list{
+        figure{
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }

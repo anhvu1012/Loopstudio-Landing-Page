@@ -12,12 +12,16 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-h1, p {
+h1, p, figure {
   margin: 0;
 }
 
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .flex-row {
@@ -261,4 +265,15 @@ main .main-content-container .info-wrapper .info-content-wrapper p {
   font-size: 0.9em;
   color: hsl(0, 0%, 50%);
   line-height: 1.75;
+}
+main .main-content-container .creations-wrapper h2 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-weight: 300;
+  font-size: 2em;
+  text-align: center;
+}
+main .main-content-container .creations-wrapper .creations-list figure img {
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */
