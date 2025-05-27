@@ -144,6 +144,9 @@ h1, p {
   font-size: 1.5em;
 }
 
+main {
+  background-color: hsl(0, 0%, 100%);
+}
 main .hero-section {
   position: relative;
 }
@@ -188,4 +191,74 @@ main .hero-section .hero-section-header h1 {
   main .hero-section .hero-section-header h1 {
     font-size: 4.6em;
   }
+}
+main .main-content-container {
+  padding-inline: 1.5em;
+}
+@media screen and (min-width: 48em) {
+  main .main-content-container {
+    padding-inline: 5em;
+  }
+}
+@media screen and (min-width: 62em) {
+  main .main-content-container {
+    padding-inline: 10.2em;
+  }
+}
+main .main-content-container .info-wrapper {
+  margin-block: 6em;
+  position: relative;
+}
+@media screen and (min-width: 62em) {
+  main .main-content-container .info-wrapper {
+    margin-block: 9em;
+  }
+}
+main .main-content-container .info-wrapper img {
+  width: 100%;
+  margin-block-end: 1em;
+}
+@media screen and (min-width: 62em) {
+  main .main-content-container .info-wrapper img {
+    width: 45em;
+  }
+}
+main .main-content-container .info-wrapper .info-content-wrapper {
+  padding-inline: 1em;
+}
+@media screen and (min-width: 62em) {
+  main .main-content-container .info-wrapper .info-content-wrapper {
+    position: absolute;
+    top: 35%;
+    left: 51%;
+    background-color: hsl(0, 0%, 100%);
+    padding-inline-start: 6.5em;
+    padding-block: 4em;
+  }
+}
+main .main-content-container .info-wrapper .info-content-wrapper > * {
+  text-align: center;
+}
+@media screen and (min-width: 62em) {
+  main .main-content-container .info-wrapper .info-content-wrapper > * {
+    text-align: left;
+  }
+}
+main .main-content-container .info-wrapper .info-content-wrapper h2 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-weight: 300;
+  font-size: 2em;
+}
+@media screen and (min-width: 62em) {
+  main .main-content-container .info-wrapper .info-content-wrapper h2 {
+    font-size: 2.5em;
+  }
+}
+main .main-content-container .info-wrapper .info-content-wrapper p {
+  font-family: "Alata", sans-serif;
+  font-size: 0.9em;
+  color: hsl(0, 0%, 50%);
+  line-height: 1.75;
 }/*# sourceMappingURL=styles.css.map */

@@ -4,6 +4,7 @@ $font-josefin: 'Josefin Sans', sans-serif;
 $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
 $grey-200: hsl(0, 0%, 85%);
+$grey-500: hsl(0, 0%, 50%);
 
 body{
   margin: 0;
@@ -185,6 +186,8 @@ h1, p {
 }
 
 main{
+  background-color: $white;
+
   .hero-section{
     position: relative;
 
@@ -224,4 +227,69 @@ main{
       }
     }
   }
+
+  .main-content-container{
+    padding-inline: 1.5em;
+    @include breakpoint(tablet){
+      padding-inline: 5em;
+    }
+    @include breakpoint(desktop){
+      padding-inline: 10.2em;
+    }
+
+    .info-wrapper{
+      margin-block: 6em;
+      position: relative;
+      @include breakpoint(desktop){
+        margin-block: 9em;
+      }
+
+      img{
+        width: 100%;
+        margin-block-end: 1em;
+        @include breakpoint(desktop){
+          width: 45em;
+        }
+      }
+
+      .info-content-wrapper{
+        padding-inline: 1em;
+        @include breakpoint(desktop){
+          position: absolute;
+          top: 35%;
+          left: 51%;
+          background-color: $white;
+          padding-inline-start: 6.5em;
+          padding-block: 4em;
+        }
+
+        &>*{
+          text-align: center;
+          @include breakpoint(desktop){
+            text-align: left;
+          }
+        }
+
+        h2{
+          @include font-type(heading);
+          font-weight: 300;
+          font-size: 2em;
+          @include breakpoint(desktop){
+            font-size: 2.5em;
+          }
+        }
+
+        p{
+          @include font-type(normaltext);
+          font-size: 0.9em;
+          color: $grey-500;
+          line-height: 1.75;
+        }
+      }
+    }
+
+    
+  }
+
+  
 }
