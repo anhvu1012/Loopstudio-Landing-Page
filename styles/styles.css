@@ -391,7 +391,51 @@ main .main-content-container .creations-wrapper .creations-list figure span {
   }
 }
 
-footer {
+.footer {
   background-color: hsl(0, 0%, 0%);
   color: hsl(0, 0%, 100%);
+  padding-block: 3em;
+}
+@media screen and (min-width: 62em) {
+  .footer {
+    flex-direction: row;
+    padding-inline: 10.4em;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 62em) {
+  .footer > div:first-child {
+    align-items: start;
+  }
+}
+.footer > div:first-child .footer-logo {
+  width: 9.4em;
+}
+.footer > div:first-child .footer-navi {
+  margin-block: 2em;
+  row-gap: 1.5em;
+}
+@media screen and (min-width: 62em) {
+  .footer > div:first-child .footer-navi {
+    flex-direction: row;
+    column-gap: 2em;
+  }
+}
+.footer > div:first-child .footer-navi .footer-navi-link {
+  color: hsl(0, 0%, 85%);
+  text-decoration: none;
+  font-family: "Alata", sans-serif;
+}
+@media screen and (min-width: 62em) {
+  .footer > div:last-child {
+    align-items: end;
+  }
+}
+.footer > div:last-child .social-links-list {
+  margin-block: 1em;
+  column-gap: 1em;
+}
+.footer > div:last-child .copyright {
+  color: hsl(0, 0%, 50%);
+  font-family: "Alata", sans-serif;
 }/*# sourceMappingURL=styles.css.map */
