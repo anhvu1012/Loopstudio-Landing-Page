@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Frontend Mentor]()
-- Live Site URL: [GitHub Page]()
+- Live Site URL: [GitHub Page](https://anhvu1012.github.io/Loopstudio-Landing-Page/)
 
 ## My process
 
