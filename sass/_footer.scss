@@ -1,0 +1,66 @@
+@import './variables-and-mixins';
+
+.footer{
+  background-color: $black;
+  color: $white;
+  padding-block: 3em;
+  row-gap: 1em;
+  flex-direction: column;
+  @include breakpoint(desktop){
+    flex-direction: row;
+    padding-inline: 10.4em;
+    justify-content: space-between;
+  }
+
+  &>div:first-child{
+    row-gap: 1em;
+    margin-block-end: 1.5em;
+    @include breakpoint(desktop){
+      align-items: start;
+      margin-block-end: 0;
+    }
+    .footer-logo{
+      @include img-size(9.4em);
+    }
+
+    .footer-navi{
+      // row-gap: 1.5em;
+      @include breakpoint(desktop){
+        flex-direction: row;
+        column-gap: 2em;
+      }
+
+      .footer-navi-link{
+        padding-block: 1em;
+        position: relative;
+        color: $grey-200;
+        text-decoration: none;
+        @include font-type(normaltext);
+        @include link-underline;
+      }
+    }
+  }
+
+  &>div:last-child{
+    row-gap: 1.5em;
+    @include breakpoint(desktop){
+      align-items: end;
+    }
+    .social-links-list{
+      column-gap: 1em;
+
+      .social-link{
+        padding-block-end: 0.5em;
+        border-bottom: 3px solid transparent;
+        &:hover{
+          border-bottom-color: $white;
+        }
+      }
+    }
+
+    .copyright{
+      color: $grey-500;
+      @include font-type(normaltext);
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import './variables-and-mixins';
+
+.web-navi{
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-block: 2.5em;
+  margin-inline: 1.4em;
+  z-index: 2;
+
+  @include breakpoint(tablet){
+    margin-inline: 2.8em;
+  }
+
+  @include breakpoint(desktop){
+    margin-block: 3.7em;
+    margin-inline: 10.2em;
+  }
+
+  .logo{
+    @include img-size(9.4em);
+    @include breakpoint(desktop){
+      width: initial;
+    }
+  }
+
+  #navi-open-btn{
+    @include breakpoint(desktop){
+      display: none;
+    }
+  }
+
+  .navi-list{
+    display: none;
+    column-gap: 1.8em;
+    @include breakpoint(desktop){
+      display: flex;
+    }
+
+    .navi-link{
+      padding-block: 1em;
+      @include navi-link;
+      @include font-type(normaltext);
+      position: relative;
+      @include link-underline;
+    }
+  }
+}
+
+#navi-wrapper-mobile{
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $black;
+  padding-inline: 1.3em;
+  padding-block: 2.5em;
+  row-gap: 10em;
+  @include breakpoint(tablet){
+    padding-inline: 2.8em;
+  }
+
+  div{
+    &>img:first-child{
+      @include img-size(9.4em);
+    }
+  }
+
+  .navi-list-mobile{
+    row-gap: 1.5em;
+    &>a{
+      @include navi-link;
+      @include font-type(heading);
+      font-size: 1.5em;
+    }
+  }
+}

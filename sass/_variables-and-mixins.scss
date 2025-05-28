@@ -1,0 +1,58 @@
+$image-ids: image-deep-earth, image-night-arcade, image-soccer-team, image-grid, image-from-above, image-pocket-borealis, image-curiosity, image-fisheye;
+
+$font-alata: 'Alata', sans-serif;
+$font-josefin: 'Josefin Sans', sans-serif;
+
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$grey-200: hsl(0, 0%, 85%); 
+$grey-500: hsl(0, 0%, 50%);
+
+@mixin breakpoint ( $size ){
+  @if $size == tablet{
+    @media screen and (min-width: 48em) {
+      @content;
+    }
+  }
+  @else if $size == desktop{
+    @media screen and (min-width: 62em) {
+      @content;
+    }
+  }
+}
+
+@mixin font-type ($type) {
+  @if $type == heading{
+    font-family: $font-josefin;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+  @else if $type == normaltext{
+    font-family: $font-alata;
+  }
+}
+
+@mixin img-size ($size) {
+  width: $size;
+}
+
+@mixin navi-link {
+  color: $white;
+  text-decoration: none;
+}
+@mixin link-underline {
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 3px;
+    width: 0;
+    background-color: $white;
+    transform: translateX(-50%);
+  }
+
+  &:hover::after{
+    width: 50%;
+  }
+}
